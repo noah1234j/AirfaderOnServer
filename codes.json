@@ -1,0 +1,37 @@
+{
+    "started": {
+        "code": 200,
+        "status": "Started",
+        "message": "Airfader has successfully started!"
+    },
+    "stopped": {
+        "code": 200,
+        "status": "Stopped",
+        "message": "Airfader has successfully stopped!"
+    },
+    "error": {
+        "code": 501,
+        "status": "Error",
+        "message": "Airfader has refused to start/stop!"
+    },
+    "running": {
+        "code": 200,
+        "status": "Running",
+        "message": "Airfader is running"
+    },
+    "notRunning": {
+        "code": 200,
+        "status": "Stopped",
+        "message": "Airfader not running"
+    },
+    "restarted": {
+        "code": 200,
+        "status": "Started",
+        "message": "Airfader successfully restarted"
+    },
+    "unknown": {
+        "code": 401,
+        "staus": "Unfound",
+        "message": "Unable to locate command"
+    }
+}
