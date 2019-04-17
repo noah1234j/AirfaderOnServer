@@ -1,0 +1,48 @@
+2019-04-17 13:10:32 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 "C:\Users\Wolt-Lenovo\Documents\01_workplace_william\Airfader Power Server\AirfaderOnServer\node_modules\node-windows\lib\wrapper.js" --file "C:\Users\Wolt-Lenovo\Documents\01_workplace_william\Airfader Power Server\AirfaderOnServer\index.js" --log "Airfader Automation Server wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2019-04-17 13:10:33 - Started 10148
+2019-04-17 13:12:30 - Stopping airfaderautomationserver.exe
+2019-04-17 13:12:30 - ProcessKill 10148
+2019-04-17 13:12:30 - Found child process: 1148 Name: conhost.exe
+2019-04-17 13:12:30 - Found child process: 14028 Name: node.exe
+2019-04-17 13:12:31 - Stopping process 1148
+2019-04-17 13:12:31 - Send SIGINT 1148
+2019-04-17 13:12:31 - SIGINT to 1148 failed - Killing as fallback
+2019-04-17 13:12:31 - Stopping process 14028
+2019-04-17 13:12:31 - Send SIGINT 14028
+2019-04-17 13:12:31 - SIGINT to 14028 failed - Killing as fallback
+2019-04-17 13:12:31 - Stopping process 10148
+2019-04-17 13:12:31 - Send SIGINT 10148
+2019-04-17 13:12:31 - SIGINT to 10148 failed - Killing as fallback
+2019-04-17 13:12:31 - Finished airfaderautomationserver.exe
+2019-04-17 13:13:02 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 "C:\Users\Wolt-Lenovo\Documents\01_workplace_william\Airfader Power Server\AirfaderOnServer\node_modules\node-windows\lib\wrapper.js" --file "C:\Users\Wolt-Lenovo\Documents\01_workplace_william\Airfader Power Server\AirfaderOnServer\index.js" --log "Airfader Automation Server wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2019-04-17 13:13:03 - Started 7440
+2019-04-17 13:16:37 - Stopping airfaderautomationserver.exe
+2019-04-17 13:16:37 - ProcessKill 7440
+2019-04-17 13:16:38 - Found child process: 12412 Name: conhost.exe
+2019-04-17 13:16:38 - Found child process: 12036 Name: node.exe
+2019-04-17 13:16:38 - Stopping process 12412
+2019-04-17 13:16:39 - Send SIGINT 12412
+2019-04-17 13:16:39 - SIGINT to 12412 failed - Killing as fallback
+2019-04-17 13:16:39 - Stopping process 12036
+2019-04-17 13:16:39 - Send SIGINT 12036
+2019-04-17 13:16:39 - SIGINT to 12036 failed - Killing as fallback
+2019-04-17 13:16:39 - Stopping process 7440
+2019-04-17 13:16:39 - Send SIGINT 7440
+2019-04-17 13:16:39 - SIGINT to 7440 failed - Killing as fallback
+2019-04-17 13:16:39 - Finished airfaderautomationserver.exe
+2019-04-17 13:17:39 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 "C:\Users\Wolt-Lenovo\Documents\01_workplace_william\Airfader Power Server\AirfaderOnServer\node_modules\node-windows\lib\wrapper.js" --file "C:\Users\Wolt-Lenovo\Documents\01_workplace_william\Airfader Power Server\AirfaderOnServer\index.js" --log "Airfader Automation Server wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2019-04-17 13:17:40 - Started 13000
+2019-04-17 13:18:42 - Stopping airfaderautomationserver.exe
+2019-04-17 13:18:42 - ProcessKill 13000
+2019-04-17 13:18:43 - Found child process: 12832 Name: conhost.exe
+2019-04-17 13:18:43 - Found child process: 13132 Name: node.exe
+2019-04-17 13:18:43 - Stopping process 12832
+2019-04-17 13:18:43 - Send SIGINT 12832
+2019-04-17 13:18:43 - SIGINT to 12832 failed - Killing as fallback
+2019-04-17 13:18:43 - Stopping process 13132
+2019-04-17 13:18:43 - Send SIGINT 13132
+2019-04-17 13:18:43 - SIGINT to 13132 failed - Killing as fallback
+2019-04-17 13:18:43 - Stopping process 13000
+2019-04-17 13:18:43 - Send SIGINT 13000
+2019-04-17 13:18:43 - SIGINT to 13000 failed - Killing as fallback
+2019-04-17 13:18:43 - Finished airfaderautomationserver.exe

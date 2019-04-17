@@ -6,22 +6,28 @@ const fkill = require('fkill')
 ////////////////////////////////SETTINGS/////////////////////////////////
 
 let airfader = 'C:/ProgramData/Microsoft/Windows/"Start Menu"/Programs/AirFader/airfader.lnk'
+let DME = 'C:/Windows/SysWOW64/"DME-N Network Driver.exe"'
 let startCmd = `start ${airfader}`
 let cmd = "AirFader.exe"
 
 //////////////////////////////////MODEL//////////////////////////////////
 
 class AirFader {
-    async on() {
+    async start() {
         //If not started
-        if (!(await started())) {
+        if (!(await running('AirFader.exe'))) {
+
+            //Restarting the dme driver
+            await restartDme()
 
             //start it
-            if (await execSync(startCmd) == "success") {
+            if (await execSync(startCmd)) {
 
                 // Check its started
-                if ( await status() ) {
+                if ( await running(cmd) ) {
                     return code.started
+                } else {
+                    return code.error
                 }
             }
 
@@ -35,10 +41,10 @@ class AirFader {
 
     }
     
-    async off() {
+    async stop() {
 
         //if running
-        if (await started()) {
+        if (await running(cmd)) {
 
             //Killing the process
             await fkill("AirFader.exe", {
@@ -47,7 +53,7 @@ class AirFader {
             })
 
             //Checking that it's killed
-            if (!(await started())) {
+            if (!(await running(cmd))) {
                 return code.stopped
             } else {
                 return code.error
@@ -67,7 +73,7 @@ class AirFader {
     }
 
     async status() {
-        if (await started()) {
+        if (await running(cmd)) {
             return code.running
         } else {
             return code.notRunning
@@ -77,18 +83,38 @@ class AirFader {
 
 ////////////////////////////FUNCTIONS//////////////////////
 
-async function started() {
-    if ((await find('name', 'AirFader.exe')).length) {
+function delay(time) {
+    setTimeout(() => {
+        return true
+    }, time);
+}
+
+async function running(name) {
+    if ((await find('name', name)).length) {
         return true
     } else {
         return false
     }
 }
 
-function delay(time) {
-    setTimeout(()=>{
+async function restartDme() {
+    if (await running('DME-N Network Driver.exe')) {
+
+        //Kill DME Driver
+        await fkill('DME-N Network Driver.exe', {
+            tree: true,
+            force: true
+        })
+        
+        //Start DME Driver
+        exec(`start ${DME}`)
+
         return true
-    }, time)
+    } else {
+        await execSync(`start ${DME}`)
+        
+        return true
+    }
 }
 
 function execSync(cmd) {
@@ -96,10 +122,10 @@ function execSync(cmd) {
     return new Promise((resolve, reject) => {
         exec(cmd, (err) => {
             if (err) {
+                console.log(err)
                 reject(err)
             } else {
-                //Waits a sec to give airfader a chance to start
-                setTimeout(() => { resolve('success') }, 1500);
+                resolve(true)
             }
         })
     })

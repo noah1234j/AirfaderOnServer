@@ -1,0 +1,29 @@
+{
+  "name": "airfaderonserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "find-process": "^1.4.1",
+    "fkill": "^6.1.0",
+    "morgan": "^1.9.1",
+    "node-cmd": "^3.0.0",
+    "node-windows": "^0.1.14"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noah1234j/AirfaderOnServer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noah1234j/AirfaderOnServer/issues"
+  },
+  "homepage": "https://github.com/noah1234j/AirfaderOnServer#readme"
+}
